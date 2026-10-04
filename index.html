@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saska Aulisecha - Portfolio</title>
+    <!-- Font Pixel -->
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigasi Bar -->
+<!-- Navigasi Bar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-sas">S.A.S</div>
+            <div class="tagline">
+                <strong>Saska Aulisecha</strong><br>
+                <span>Available for opportunity</span>
+            </div>
+        </div>
+        
+        <!-- Menu Desktop -->
+        <div class="nav-right">
+            <a href="#home">Home</a>
+            <a href="#profil">Profile</a>
+            <a href="#keahlian">Tech Stack</a>
+            <a href="#projek">Projects</a>
+            <a href="#kontak">Contact</a>
+        </div>
+
+        <!-- Tombol Garis Tiga (Hamburger) untuk HP -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Menu Dropdown khusus Mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#profil" onclick="toggleMenu()">Profile</a>
+        <a href="#keahlian" onclick="toggleMenu()">Tech Stack</a>
+        <a href="#projek" onclick="toggleMenu()">Projects</a>
+        <a href="#kontak" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <!-- 1. Home -->
+    <section id="home" class="section home-section">
+        <div class="home-content">
+            <div class="text-content">
+                <h1>Halo, Saya <br><span class="highlight">Saska Aulisecha</span></h1>
+                <h2>Mahasiswa Informatika</h2>
+                <p class="small-info"> <p class="small-info">
+                    Saya adalah mahasiswa yang memiliki ketertarikan besar pada teknologi, pengembangan perangkat lunak, dan inovasi digital. Saya senang mempelajari hal-hal baru, mengikuti perkembangan teknologi terbaru, serta mengeksplorasi berbagai ide kreatif untuk mengubah rasa penasaran menjadi karya nyata.
+                </p>
+                </p>
+                <div class="buttons">
+                    <a href="#projek" class="btn btn-primary">Lihat Apa Yang Saya Buat</a>
+                    <a href="#kontak" class="btn btn-secondary">Ayo Berkenalan</a>
+                </div>
+            </div>
+                <div class="image-content">
+                <div class="photo-placeholder-main" style="padding: 0; overflow: hidden;">
+                    <img src="image/foto-utama.jpg" alt="Foto Saska" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Profil -->
+<!-- 2. Profil -->
+    <section id="profil" class="section">
+        <h2 class="section-title">Profile</h2>
+        <div class="profil-content single-profil">
+            <div class="profil-details">
+                <h3>Saska Aulisecha</h3>
+                <div class="info-list">
+                    <div class="info-item"><strong>Universitas:</strong> Universitas Gunadarma</div>
+                    <div class="info-item"><strong>Jurusan:</strong>Informatika</div>
+                    <div class="info-item"><strong>Lokasi:</strong> Depok, Jawa Barat, Indonesia</div>
+                    <div class="info-item"><strong>Status:</strong> Mahasiswa Aktif Semester 5</div>
+                </div>
+                <div class="about-me">
+                    <p>Halo! Saya Saska, seorang mahasiswa yang memiliki rasa ingin tahu tinggi terhadap dunia teknologi. Saya selalu tertarik mengikuti perkembangan teknologi terbaru, mulai dari pengembangan perangkat lunak, robotika, hingga teknologi antariksa seperti roket dan eksplorasi luar angkasa.</p>
+
+                    <p>Saya menikmati proses belajar dan mencoba berbagai hal baru. Bagi saya, teknologi bukan hanya tentang menulis kode, tetapi juga tentang memahami bagaimana sebuah ide dapat berkembang menjadi solusi yang bermanfaat. Ketertarikan tersebut mendorong saya untuk terus mengeksplorasi berbagai bidang, termasuk pengembangan backend, pembuatan game, dan projek kreatif lainnya.</p>
+
+                    <p>Di luar dunia teknologi, saya suka membaca buku dan memecahkan teka-teki karena keduanya melatih pola pikir analitis dan kreativitas. Saya percaya bahwa rasa ingin tahu yang besar adalah kunci untuk terus berkembang, sehingga saya selalu terbuka terhadap tantangan, pengalaman baru, dan kesempatan untuk belajar hal-hal yang belum pernah saya coba sebelumnya.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 3. Keahlian -->
+    <section id="keahlian" class="section bg-light">
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <span class="skill-icon">💻</span>
+                <span class="skill-name">HTML</span>
+            </div>
+            <div class="skill-card">
+                <span class="skill-icon">🎨</span>
+                <span class="skill-name">CSS</span>
+            </div>
+            <div class="skill-card">
+                <span class="skill-icon">⚡</span>
+                <span class="skill-name">JavaScript</span>
+            </div>
+            <div class="skill-card">
+                <span class="skill-icon">🐍</span>
+                <span class="skill-name">Python</span>
+            </div>
+            <div class="skill-card">
+                <span class="skill-icon">☕</span>
+                <span class="skill-name">Java</span>
+            </div>
+            <div class="skill-card">
+                <span class="skill-icon">🐹</span>
+                <span class="skill-name">Golang</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Projek -->
+<!-- 4. Projek -->
+    <section id="projek" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projek-list-container">
+            
+            <!-- Projek 1 (Sudoku) -->
+            <div class="projek-row" onclick="window.location.href='sudoku.html'">
+                <div class="projek-num">01</div>
+                <div class="projek-thumb" style="padding: 0; overflow: hidden;">
+                    <img src="image/gambar_sudoku.jpg" alt="Sudoku Web Game" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="projek-info">
+                    <span class="projek-category">WEB</span>
+                    <h3>SUDOKU WEB GAME</h3>
+                    <p>Pembuatan game Sudoku interaktif berbasis web menggunakan HTML, CSS, dan logika JavaScript murni tanpa framework.</p>
+                </div>
+                <div class="projek-arrow">→</div>
+            </div>
+
+            <hr class="projek-divider">
+
+            <!-- Projek 2 (Data Science) -->
+            <div class="projek-row" onclick="window.location.href='churn.html'">
+                <div class="projek-num">02</div>
+                <div class="projek-thumb" style="padding: 0; overflow: hidden;">
+                    <img src="image/churn.jpg" alt="Prediksi Churn" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>                <div class="projek-info">
+                    <span class="projek-category">DATA SCIENCE</span>
+                    <h3>PREDIKSI CHURN</h3>
+                    <p>Eksplorasi machine learning di Google Colab menggunakan Python, Pandas, dan Scikit-learn untuk memprediksi risiko churn pelanggan.</p>
+                </div>
+                <div class="projek-arrow">→</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. Kontak -->
+    <section id="kontak" class="section bg-light">
+        <h2 class="section-title">Contact</h2>
+        <div class="kontak-container">
+            <a href="https://www.linkedin.com/in/saska-aulisecha-b8a537403" target="_blank" class="btn btn-kontak">🔗 LinkedIn</a>
+            <a href="https://www.instagram.com/saskaasecha/" target="_blank" class="btn btn-kontak">📸 Instagram</a>
+            <a href="https://github.com/Asechsa" target="_blank" class="btn btn-kontak">🐙 GitHub</a>
+            <button onclick="copyEmail()" class="btn btn-kontak btn-email">📧 Salin Email</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,732 @@
+/* CSS - Tema Pastel Elegan dengan Mix Font (Pixel & Modern) */
+:root {
+    /* MENDUETKAN DUA FONT */
+    --font-pixel: 'Pixelify Sans', cursive, sans-serif;
+    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font ala Windows 7 yang mudah dibaca */
+
+    --bg-color: #FAFAFC; 
+    --text-main: #2D3142; 
+    --text-muted: #6B7280;
+    
+    --pastel-pink: #FFE5EC;
+    --pastel-peach: #FFD6C9;
+    --pastel-mint: #D5ECC2;
+    --pastel-lavender: #E8E8FA;
+    
+    --white: #FFFFFF;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body); /* Body default menggunakan font yang sangat mudah dibaca */
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.bg-light {
+    background-color: var(--white);
+}
+
+/* Navigasi - Glassmorphism */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-sas {
+    font-family: var(--font-pixel); /* PAKE FONT PIXEL */
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-main);
+    background: var(--pastel-pink);
+    padding: 8px 16px;
+    border-radius: 12px;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 14px;
+    line-height: 1.3;
+}
+.tagline strong {
+    font-weight: 600;
+}
+.tagline span {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.nav-right a {
+    font-family: var(--font-pixel); /* PAKE FONT PIXEL */
+    text-decoration: none;
+    color: var(--text-main);
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 22px; /* Dibuat sedikit lebih besar karena font pixel cenderung kecil */
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.nav-right a:hover {
+    color: #FF9A9E; 
+    transform: translateY(-2px);
+}
+
+/* Bagian / Section */
+.section {
+    padding: 120px 5% 80px 5%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-family: var(--font-pixel); /* PAKE FONT PIXEL */
+    text-align: center;
+    font-size: 44px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    color: var(--text-main);
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--pastel-peach);
+    border-radius: 2px;
+}
+
+/* Tombol */
+.btn {
+    font-family: var(--font-body); /* Tetap font biasa agar mudah dibaca */
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    font-family: var(--font-pixel); /* <-- TAMBAHKAN INI AGAR JADI FONT PIXEL */
+    font-size: 16px; 
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary { 
+    background-color: #2D3142; 
+    color: var(--white); 
+    box-shadow: 0 4px 15px rgba(45, 49, 66, 0.2);
+}
+.btn-primary:hover {
+    background-color: #40455A;
+    transform: translateY(-3px);
+}
+
+.btn-secondary { 
+    background-color: var(--pastel-pink); 
+    color: var(--text-main); 
+}
+.btn-secondary:hover {
+    background-color: #FFD1DC;
+    transform: translateY(-3px);
+}
+
+.btn-back { 
+    background-color: var(--white); 
+    color: var(--text-main); 
+    border: 1px solid #E5E7EB;
+    font-size: 14px;
+    padding: 8px 20px;
+}
+.btn-back:hover {
+    background-color: var(--pastel-pink);
+    border-color: var(--pastel-pink);
+}
+
+/* Home */
+.home-section {
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content h1 {
+    font-family: var(--font-pixel); /* PAKE FONT PIXEL */
+    font-size: 58px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.highlight {
+    background: linear-gradient(120deg, #FF9A9E 0%, #FECFEF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-content h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.small-info {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+    max-width: 90%;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.photo-placeholder-main {
+    width: 350px;
+    height: 400px;
+    background-color: var(--pastel-lavender);
+    border-radius: 30px 100px 30px 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #8C94B2;
+    box-shadow: var(--shadow-soft);
+    border: 8px solid var(--white);
+    transition: transform 0.4s ease;
+}
+.photo-placeholder-main:hover {
+    transform: scale(1.02);
+}
+
+/* Profil */
+.profil-content {
+    display: flex;
+    gap: 50px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-soft);
+    width: 100%;
+    max-width: 1000px;
+}
+
+.profil-photos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.photo-placeholder.small {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    background-color: var(--pastel-mint);
+    color: #7B9B6A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.photo-placeholder.small:nth-child(2) {
+    background-color: var(--pastel-peach);
+    color: #A36B5E;
+}
+
+.profil-details {
+    flex: 1;
+}
+
+.profil-details h3 {
+    font-size: 26px; /* Tetap font mudah dibaca (Segoe UI) */
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.info-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-item {
+    font-size: 15px;
+    color: var(--text-main);
+}
+.info-item strong {
+    color: var(--text-muted);
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.about-me {
+    padding-top: 25px;
+    border-top: 1px solid #F3F4F6;
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+/* Keahlian */
+/* Styling Keahlian ala Game Inventory / Retro Card */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.skill-card {
+    background-color: var(--bg-color);
+    border: 2px solid #D1D5DB;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.skill-card:hover {
+    background-color: var(--pastel-pink);
+    border-color: #2D3142;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 0 #2D3142; /* Efek tombol game retro saat ditekan/di-hover */
+}
+
+.skill-icon {
+    font-size: 28px;
+}
+
+.skill-name {
+    font-family: var(--font-pixel);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-main);
+    letter-spacing: 1px;
+}
+
+/* Projek */
+.projek-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.projek-card {
+    background: var(--white);
+    width: 340px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.projek-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--pastel-pink);
+}
+
+.card-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0,0,0,0.4);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.bg-pastel-1 { background-color: var(--pastel-mint); }
+.bg-pastel-2 { background-color: var(--pastel-peach); }
+
+.card-info {
+    padding: 25px;
+}
+
+.card-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card-info p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Kontak */
+.kontak-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 800px;
+}
+
+.btn-kontak {
+    background-color: var(--white);
+    border: 1px solid #E5E7EB;
+    color: var(--text-main);
+    font-family: var(--font-pixel); /* <-- TAMBAHKAN INI AGAR JADI FONT PIXEL */
+    font-size: 16px; /* Disesuaikan sedikit karena font pixel ukurannya agak beda */
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+
+.btn-kontak:hover {
+    background-color: #F9FAFB;
+    border-color: #D1D5DB;
+    transform: translateY(-2px);
+}
+
+.btn-email {
+    font-family: var(--font-pixel); /* <-- Tambahkan juga di sini jika perlu */
+    background-color: var(--pastel-lavender);
+    border-color: var(--pastel-lavender);
+}
+.btn-email:hover {
+    background-color: #D6D6F5;
+    border-color: #D6D6F5;
+}
+
+/* Detail Projek Page */
+.detail-nav {
+    position: absolute;
+    background: transparent;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+.detail-section {
+    padding-top: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.projek-title {
+    font-family: var(--font-pixel); /* PAKE FONT PIXEL */
+    font-size: 46px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.projek-meta {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.badge.status { background-color: var(--pastel-mint); color: #4B6E35; }
+.badge.date { background-color: #F3F4F6; color: var(--text-muted); }
+
+.projek-image-large {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0,0,0,0.4);
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.projek-description {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+.projek-description h3 {
+    color: var(--text-main);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.projek-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .home-content { flex-direction: column; text-align: center; }
+    .image-content { justify-content: center; }
+    .buttons { justify-content: center; }
+    .profil-content { flex-direction: column; }
+    .info-list { grid-template-columns: 1fr; }
+    .nav-right { display: none; }
+}
+
+/* Styling List Projek ala Referensi */
+.projek-list-container {
+    width: 100%;
+    max-width: 950px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.projek-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: var(--white);
+    padding: 25px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); 
+    border: 2px solid transparent;
+}
+
+.projek-row:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-left: 6px solid var(--text-main);
+}
+
+.projek-num {
+    font-family: var(--font-pixel);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-main);
+    min-width: 35px;
+}
+
+.projek-thumb {
+    width: 220px;
+    height: 130px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(0,0,0,0.5);
+    flex-shrink: 0;
+}
+
+.projek-info {
+    flex: 1;
+}
+
+.projek-category {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.projek-info h3 {
+    font-family: var(--font-pixel);
+    font-size: 22px;
+    margin: 0 0 8px 0;
+    color: var(--text-main);
+}
+
+.projek-info p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.projek-arrow {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-main);
+    transition: transform 0.3s ease;
+    padding-left: 10px;
+}
+
+.projek-row:hover .projek-arrow {
+    transform: translateX(8px); /* Panah bergerak ke kanan saat di-hover */
+}
+
+.projek-divider {
+    border: none;
+    border-top: 1px solid #E5E7EB;
+    margin: 0;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .projek-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .projek-thumb {
+        width: 100%;
+    }
+    .projek-arrow {
+        display: none;
+    }
+}
+
+/* Penyesuaian profil tanpa foto samping */
+.profil-content.single-profil {
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* Styling Tombol Hamburger & Mobile Menu */
+.hamburger {
+    display: none; /* Sembunyikan di layar laptop/komputer */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--text-main);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Menu Dropdown Mobile (Awalnya tersembunyi) */
+.mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #E5E7EB;
+    transition: all 0.3s ease;
+    
+    /* Sembunyikan secara default */
+    display: none; 
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    display: flex; /* Muncul saat diklik */
+}
+
+.mobile-menu a {
+    font-family: var(--font-pixel);
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.mobile-menu a:hover {
+    color: #FF9A9E;
+}
+
+/* Pengaturan Tampilan saat dibuka di Layar HP (Max-width 768px) */
+@media (max-width: 768px) {
+    .nav-right {
+        display: none; /* Sembunyikan menu mendatar biasa di HP */
+    }
+    .hamburger {
+        display: flex; /* Tampilkan tombol garis tiga di HP */
+    }
+}
